@@ -18,6 +18,16 @@ html{
     text-rendering: optimizeLegibility;
 }
 
+/*clear float after an element*/
+.clearfix{zoom:1}
+.clearfix:after{
+    content:'.';
+    clear:both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
 .row{
     max-width: 1140px;
     margin: 0 auto;
@@ -144,7 +154,24 @@ header {
     border-bottom: 2px solid #f1c40f;
 }
 
+/*LINKS*/
+a:link,
+a:visited{
+    color:#f1c40f;
+    /*No underline */
+    text-decoration: none;
+    padding: 1px;
+    border-bottom: 1px solid #f1c40f;
+    transition: border-bottom 0.2s, color 0.2s;
+}
 
+a:hover,
+a:active{
+    color:#555;
+   
+   
+    border-bottom: 1px solid transparent;
+}
 
 
 /*BUTTONS*/
@@ -184,5 +211,138 @@ header {
     border: 1px solid  #2980b9;
     color: #fff;
 }
+
+
+/*features*/
+.section-features .long-copy{
+    margin-bottom: 30px;
+}
+
+
+
+/*images*/
+.meal-showcase{
+    list-style: none;
+    width: 100%;
+}
+.meal-showcase li{
+    display: block;
+    float: left;
+    width: 25%
+}
+
+.meal-photo{
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    background: #000;
+}
+
+.meal-photo img{
+    opacity: 0.7;
+    width: 100%;
+    height: auto;
+    transform: scale(1.15);
+    transition: transform 0.5s;
+}
+.meal-photo img:hover{
+    opacity: 1;
+    transform: scale(1.03);
+}
+
+.section-meals {
+    padding: 0;
+}
+
+/*
+.steps-box {
+    margin-top: 30px;
+}
+*/
+.section-steps{
+    background-color: #e2e2e2;
+}
+
+.steps-box:first-child{
+    text-align: right;
+    padding-right: 3%;
+    margin-top: 30px;
+}
+.steps-box:last-child{
+    padding-left: 3%;
+    margin-top:70px;
+}
+.app-screen{
+    width: 40%;
+}
+
+.works-step{
+    margin-bottom:50px;
+}
+
+/*only last one have 80px*/
+.works-step:last-of-type{
+    margin-bottom: 80px;
+}
+
+
+.works-step div{
+    color:#f1c40f;
+    border:2px solid #2980b9;
+    display:inline-block;
+    border-radius: 50%;
+    height: 55px;
+    width: 55px;
+    text-align: center;
+    /*padding for the number's location*/
+    padding: 5px;
+    float:left;
+    font-size: 150%;
+    margin-right: 25px;
+}
+
+.btn-app:link,
+.btn-app:visited{
+     border-bottom: 1px solid transparent;
+}
+
+.btn-app img{
+    height: 50px;
+    width: auto;
+    margin-right:10px;
+    
+}
+
+/*city image*/
+.box img{
+    width:100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.city-feature{
+    margin-bottom: 5px;
+}
+
+.icon-small{
+    display: inline-block;
+    width:30px;
+    text-align: center;
+    color: #f1c40f;
+    font-size: 120%;
+    margin-right: 10px;
+    
+    /*way1 to align content*/
+    
+    line-height: 120%;
+    vertical-align: middle;
+    margin-top: -5px;
+    
+    
+    /*way2 to align content*/
+}
+
+
+
 
 
