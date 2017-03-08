@@ -1,0 +1,139 @@
+
+/*small phones 0-480px*/
+@media only screen and (max-width:480px){
+    section{
+        padding: 25px;
+    }
+    .contact-form{
+        width: 100%;
+    }
+    
+}
+
+
+
+
+/*small tablets to big tablets portait 767-1023px*/
+@media only screen and (max-width:1023px){
+    body{
+        font-size: 18px;
+    }
+    
+    section{
+        padding: 60px 0;
+    }
+    .long-copy{
+        width:80%;
+        margin-left: 10%;
+    }
+    .steps-box{
+        margin-top:10px;
+    }
+    .steps-box:last-child{
+        margin-top: 10px;
+    }
+    
+    .works-step{
+        margin-bottom: 40px;
+    }
+    .works-step:last-of-type{
+        margin-bottom: 60px;
+    }
+    .app-screen{
+        width:50%;
+    }
+    .icon-small{
+        width:17px;
+        margin-right: 5px;
+    }
+    .city-feature{
+        font-size: 90%;
+    }
+    .plan-box{
+        width: 100%;
+        margin-left:0;
+    }
+    
+    .plan-price{
+        font-size: 250%;
+    }
+    
+    .contact-form{
+        width: 80%;
+    }
+    
+}
+
+/*big tablets to maxium 1023-1140px*/
+@media only screen and (max-width:1200px){
+    .hero-text-box{
+        padding: 0 2%;
+        width: 100%;
+    }
+    .row{
+        padding: 0 2%;
+        
+    }
+}
+
+
+/*small phones to small tablets 481-767px*/
+@media only screen and (max-width:767px){
+    body{
+        font-size: 16px;
+    }
+    section{
+        padding:30px 0;
+    }
+    .row,
+    .hero-text-box{
+        padding: 0 4%;
+    }
+    /*wont work w/o div OR will be overriden*/
+    div.col{
+        width:100%;
+        margin: 0 0 4% 0;
+    }
+    .main-nav{
+        display: none;
+    }
+    h1{
+        font-size:180%;
+    }
+    h2{
+        font-size: 150%;
+    }
+    .long-copy{
+        width:100%;
+        margin-left: 0%;
+    }
+    .steps-box:first-child{
+        text-align: center;
+        
+    }
+   
+    .works-step div{
+    
+   
+        height: 40px;
+        width: 40px;
+
+
+        /*padding for the number's location*/
+        padding: 4px;
+        float:left;
+
+        margin-right: 15px;
+    }
+    
+    .works-step{
+        margin-bottom: 20px;
+    }
+    .works-step:last-of-type{
+        margin-bottom: 20px;
+    }
+    
+    .app-screen{
+        width:40%;
+    }
+}
