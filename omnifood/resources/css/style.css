@@ -605,4 +605,34 @@ footer p{
     font-size: 90%
 }
 
+/*Animation*/
+
+
+.js--wp-1,
+.js--wp-2,
+.js--wp-3{
+    opacity: 0;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+.js--wp-4{
+     animation-duration: 1s;
+}
+.js--wp-1 .animated{
+    opacity: 1;
+}
+
+.js--wp-2 .animated{
+    opacity: 1;
+}
+
+
+.js--wp-3 .animated{
+    opacity: 1;
+}
+
+
+
+
 
