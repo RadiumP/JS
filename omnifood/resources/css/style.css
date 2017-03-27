@@ -191,8 +191,7 @@ header {
 
 
 .sticky .main-nav{
-    float:right;
-    list-style: none;
+   
     margin-top: 18px;
 }
 
@@ -631,6 +630,28 @@ footer p{
 .js--wp-3 .animated{
     opacity: 1;
 }
+
+
+
+
+
+
+/*mobile navi*/
+.mobile-nav-icon {
+    float: right;
+    margin-top:30px;
+/*change cursor to hand    */
+    cursor: pointer;
+    display: none;
+}
+
+.mobile-nav-icon i{
+    font-size:200%;
+    color:#fff;
+}
+
+
+
 
 
 

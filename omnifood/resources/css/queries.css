@@ -15,6 +15,7 @@
 
 /*small tablets to big tablets portait 767-1023px*/
 @media only screen and (max-width:1023px){
+   
     body{
         font-size: 18px;
     }
@@ -61,7 +62,7 @@
     .contact-form{
         width: 80%;
     }
-    
+    .main-nav{  display: block;}
 }
 
 /*big tablets to maxium 1023-1140px*/
@@ -94,9 +95,53 @@
         width:100%;
         margin: 0 0 4% 0;
     }
-    .main-nav{
-        display: none;
+    .main-nav{  display: none;}
+    
+    .mobile-nav-icon {display:inline-block;}
+    .main-nav{  
+        float: left;
+        margin-top: 35px;
+        margin-left:25px;
+        
     }
+    .main-nav li{display:block;}
+    
+    .main-nav li a:link,
+    .main-nav li a:visited{
+        display: block;
+/* no border since no hover       */
+        border:0;
+        padding:10px 0;
+        font-size: 100%;
+    }
+    
+    
+    /*sticky navi*/
+    .sticky{
+        position:fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgba(255,255,255,0.98);
+        box-shadow: 0 2px 2px #efefef;
+        z-index: 9999;
+    }
+
+    .sticky .main-nav li a:link,
+    .sticky .main-nav li a:visited{
+        padding: 10px 0;
+
+
+    }
+
+
+    .sticky .main-nav{
+        margin-top: 10px;
+    }
+    .sticky .mobile-nav-icon{margin-top: 10px;}
+    .sticky .mobile-nav-icon i {color: #555;}
+    
+    
     h1{
         font-size:180%;
     }

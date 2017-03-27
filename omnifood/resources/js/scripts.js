@@ -68,3 +68,26 @@ $(document).ready(function(){
     
     
 });
+
+
+//mobile-nav
+//BUG here
+$('.js--nav-icon').click(function(){
+    var nav = $('.js--main-nav');
+    var icon = $('.js--nav-icon i')
+    
+    //200ms animation
+    nav.slideToggle(200);//!!!
+    
+    //change icon class
+    if(icon.hasClass('ion-navicon-round')){
+        icon.addClass('ion-close-round');
+        icon.removeClass('ion-navicon-round');
+    }else{
+        icon.removeClass('ion-close-round');
+        icon.addClass('ion-navicon-round');
+        //nav.removeAttr("style");
+    }
+    
+});
+
