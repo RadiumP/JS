@@ -71,13 +71,24 @@ $(document).ready(function(){
 
 
 //mobile-nav
-//BUG here
+//Solved the closed menu bug
+$( window ).resize(function() {  
+        if (window.matchMedia("(min-width: 768px)").matches) {
+            $('.main-nav').css({"display":"block"});
+            //alert('hey');
+        } else {
+            $('.main-nav').css({"display":"none"});
+        }
+    });
+
 $('.js--nav-icon').click(function(){
     var nav = $('.js--main-nav');
     var icon = $('.js--nav-icon i')
     
     //200ms animation
-    nav.slideToggle(200);//!!!
+    if ($(window).width() < 768){
+    nav.slideToggle(200);
+  }
     
     //change icon class
     if(icon.hasClass('ion-navicon-round')){
