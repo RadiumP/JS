@@ -26,6 +26,7 @@ console.log(jane.lastName);
 
 
 //object.create
+//Object.create() is an excellent choice for creating an object without going through its constructor
 
 var personProto = {
 	calculateAge: function(){
@@ -189,6 +190,12 @@ var emily = {
 	job: 'cop'
 };
 
+//Bind Allows Us to Set the this Value on Methods
+//Bind () Allows us to Borrow Methods
+//Bind Allows Us to Curry a Function: partial function application,
+
+
+
 john.prez.call(emily, 'i', 'afternoon');
 var johnF = john.prez.bind(john, 'f');
 johnF('morning');
@@ -205,7 +212,7 @@ function arrayCalc(arr,fn){
 
 
 function calculateAge(el){
-	return 2016 -el;
+	return 2016 - el;
 }
 
 function isFullAgeBind(limit, el){
@@ -216,4 +223,36 @@ function isFullAgeBind(limit, el){
 var ages = arrayCalc(years, calculateAge);
 var fullAgesBind = arrayCalc(ages, isFullAgeBind.bind(this, 20));
 console.log(fullAgesBind);
+
+//Borrowing Functions with Apply and Call (A Must Know)
+
+ // An array-like object: note the non-negative integers used as keys
+var anArrayLikeObj = {0:"Martin", 1:78, 2:67, 3:["Letta", "Marieta", "Pauline"], length:4 };
+   // Make a quick copy and save the results in a real array:
+// First parameter sets the "this" value
+var newArray = Array.prototype.slice.call (anArrayLikeObj, 0);
+
+console.log (newArray); // ["Martin", 78, 67, Array[3]]
+
+// Search for "Martin" in the array-like object
+console.log (Array.prototype.indexOf.call (anArrayLikeObj, "Martin") === -1 ? false : true); // true
+
+// Try using an Array method without the call () or apply ()
+console.log (anArrayLikeObj.indexOf ("Martin") === -1 ? false : true); // Error: Object has no method 'indexOf'
+
+// Reverse the object:
+console.log (Array.prototype.reverse.call (anArrayLikeObj));
+// {0: Array[3], 1: 67, 2: 78, 3: "Martin", length: 4}
+
+// Sweet. We can pop too:
+console.log (Array.prototype.pop.call (anArrayLikeObj));
+console.log (anArrayLikeObj); // {0: Array[3], 1: 67, 2: 78, length: 3}
+
+// What about push?
+console.log (Array.prototype.push.call (anArrayLikeObj, "Jackie"));
+console.log (anArrayLikeObj); // {0: Array[3], 1: 67, 2: 78, 3: "Jackie", length: 4}         
+
+//theFunction.apply(valueForThis, arrayOfArgs)
+
+//theFunction.call(valueForThis, arg1, arg2, ...)
 

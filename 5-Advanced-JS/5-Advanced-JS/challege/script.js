@@ -1,5 +1,5 @@
 //IIFE: make sure all the var in this function wont be interfered by others
-(function(){
+(function () {
    var Question = function(quiz, choice, ans){
     this.quiz = quiz;
     this.choice = choice;
